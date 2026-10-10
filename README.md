@@ -135,6 +135,18 @@ prompt-injection-detector/
 └── presentation/
 ```
 
+## Reproducibility
+
+Create the cleaned dataset from the raw archives with `scripts/clean_data.py`.
+Then create the exact group-aware train/validation/test split with:
+
+```bash
+python scripts/create_splits.py
+```
+
+The raw source archives belong in `data/raw/`. The generated fixed split
+files belong in `data/splits/`.
+
 ## Team Contributions
 
 Each team member must add a file using:
