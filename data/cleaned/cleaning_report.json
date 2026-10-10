@@ -1,0 +1,18 @@
+{
+  "candidate_rows": 4815,
+  "candidate_safe": 2039,
+  "candidate_prompt_injection": 2776,
+  "empty_text_rows": 0,
+  "conflicting_text_values": 0,
+  "exact_duplicate_rows_removed": 878,
+  "final_rows": 3937,
+  "final_safe": 2014,
+  "final_prompt_injection": 1923,
+  "unique_groups": 2201,
+  "source_distribution": {
+    "e2a_prompt_injection": 1923,
+    "spamassassin_ham": 1500,
+    "notinject": 339,
+    "e2a_matched_benign": 175
+  }
+}
