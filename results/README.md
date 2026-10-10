@@ -2,7 +2,7 @@
 
 This directory stores the final benchmark and error-analysis outputs from the fixed held-out test split.
 
-## Completed benchmark
+## Final benchmark
 
 | Model | Accuracy | Precision | Recall | F1 |
 |---|---:|---:|---:|---:|
@@ -13,11 +13,7 @@ This directory stores the final benchmark and error-analysis outputs from the fi
 | DeBERTa | 0.9949 | 0.9932 | 0.9966 | 0.9949 |
 | Naive Bayes | 0.9932 | 0.9864 | 1.0000 | 0.9932 |
 
-The benchmark currently contains all completed locally trained models.
-
-## JEV status
-
-JEV is intentionally not included yet. It will be added only after it is evaluated on the complete same 589-example held-out test set.
+The benchmark contains the completed locally trained models. JEV was tested manually on a small 10-example sample but was excluded from the final benchmark because the full API benchmark requires paid credits.
 
 ## Files
 
