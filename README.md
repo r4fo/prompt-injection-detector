@@ -66,6 +66,12 @@ The project therefore uses a **group-aware split**:
 - 15% validation
 - 15% testing
 
+Final split sizes:
+
+- Train: **2,740**
+- Validation: **608**
+- Test: **589**
+
 ## Models
 
 - Multinomial Naive Bayes
@@ -74,7 +80,7 @@ The project therefore uses a **group-aware split**:
 - BiLSTM
 - DistilBERT (`distilbert-base-uncased`)
 - DeBERTa (`microsoft/deberta-v3-small`)
-- JEV structured decision model
+- JEV structured decision model — **pending final full-test evaluation**
 
 ## Evaluation Metrics
 
@@ -89,23 +95,24 @@ Also reported:
 - Recall
 - Macro-F1
 
-## Current Verified Result
+Recall is an important secondary metric because a false negative means a real prompt-injection attack was classified as SAFE.
 
-The final DeBERTa run on the fixed test set achieved:
+## Current Final Benchmark
 
-- Accuracy: **99.49%**
-- Prompt-injection Precision: **99.32%**
-- Prompt-injection Recall: **99.66%**
-- Prompt-injection F1: **99.49%**
+The following results use the same fixed 589-example held-out test split:
 
-Confusion matrix:
+| Model | Accuracy | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|
+| **BiLSTM** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
+| Logistic Regression | 0.9983 | 1.0000 | 0.9966 | 0.9983 |
+| DistilBERT | 0.9983 | 1.0000 | 0.9966 | 0.9983 |
+| CNN | 0.9983 | 1.0000 | 0.9966 | 0.9983 |
+| DeBERTa | 0.9949 | 0.9932 | 0.9966 | 0.9949 |
+| Naive Bayes | 0.9932 | 0.9864 | **1.0000** | 0.9932 |
 
-| | Predicted SAFE | Predicted PROMPT_INJECTION |
-|---|---:|---:|
-| True SAFE | 296 | 2 |
-| True PROMPT_INJECTION | 1 | 290 |
+At this stage, **BiLSTM is the top-performing completed method** on the fixed held-out test set.
 
-The full benchmark will be added to `results/` after every final model and JEV run has completed.
+JEV will be added later after the full test-set API evaluation is completed. A small connection test must not be reported as an official benchmark result.
 
 ## Repository Structure
 
@@ -136,7 +143,7 @@ Each team member must add a file using:
 contributions/STUDENT_NAME_STUDENT_ID_GITHUB_USERNAME.md
 ```
 
-The description should match the member's real Git history and work.
+The contribution description should match the member's actual work and Git history.
 
 ## License and Attribution
 
