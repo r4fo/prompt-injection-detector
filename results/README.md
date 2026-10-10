@@ -1,15 +1,30 @@
 # Results
 
-This directory stores final benchmark outputs and error-analysis files.
+This directory stores the final benchmark and error-analysis outputs from the fixed held-out test split.
 
-Current verified result:
-- DeBERTa: 99.49% accuracy, 99.49% prompt-injection F1 on the fixed 589-example test split.
+## Completed benchmark
 
-After all final runs, add:
-- `final_benchmark.csv`
-- `jev_predictions.csv`
-- `final_error_analysis.csv`
-- `source_error_analysis.csv`
-- `surface_error_analysis.csv`
+| Model | Accuracy | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|
+| **BiLSTM** | **1.0000** | **1.0000** | **1.0000** | **1.0000** |
+| Logistic Regression | 0.9983 | 1.0000 | 0.9966 | 0.9983 |
+| DistilBERT | 0.9983 | 1.0000 | 0.9966 | 0.9983 |
+| CNN | 0.9983 | 1.0000 | 0.9966 | 0.9983 |
+| DeBERTa | 0.9949 | 0.9932 | 0.9966 | 0.9949 |
+| Naive Bayes | 0.9932 | 0.9864 | 1.0000 | 0.9932 |
 
-Only full held-out test-set results should be included in the official benchmark.
+The benchmark currently contains all completed locally trained models.
+
+## JEV status
+
+JEV is intentionally not included yet. It will be added only after it is evaluated on the complete same 589-example held-out test set.
+
+## Files
+
+- `final_benchmark.csv` — completed model comparison.
+- `final_error_analysis.csv` — error rows for the current best model.
+- `source_error_analysis.csv` — errors grouped by dataset source.
+- `surface_error_analysis.csv` — performance by email rendering surface.
+- `deberta_metrics.json` — verified detailed DeBERTa result.
+
+Only full held-out test-set results should be treated as official benchmark results.
