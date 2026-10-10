@@ -9,7 +9,7 @@ The project classifies each email as:
 - `0 = SAFE`
 - `1 = PROMPT_INJECTION`
 
-The final pipeline starts from raw E2A email data, performs reproducible parsing and cleaning, creates leakage-safe train/validation/test splits, and benchmarks classical ML, neural networks, Transformer models, and JEV.
+The final pipeline starts from raw E2A email data, performs reproducible parsing and cleaning, creates leakage-safe train/validation/test splits, and benchmarks classical ML, neural networks, and Transformer models.
 
 ## Dataset
 
@@ -80,7 +80,8 @@ Final split sizes:
 - BiLSTM
 - DistilBERT (`distilbert-base-uncased`)
 - DeBERTa (`microsoft/deberta-v3-small`)
-- JEV structured decision model — **pending final full-test evaluation**
+
+JEV was tested manually on a small 10-example sample, but it was excluded from the final benchmark because the full API benchmark requires paid credits.
 
 ## Evaluation Metrics
 
@@ -97,7 +98,7 @@ Also reported:
 
 Recall is an important secondary metric because a false negative means a real prompt-injection attack was classified as SAFE.
 
-## Current Final Benchmark
+## Final Benchmark
 
 The following results use the same fixed 589-example held-out test split:
 
@@ -110,9 +111,7 @@ The following results use the same fixed 589-example held-out test split:
 | DeBERTa | 0.9949 | 0.9932 | 0.9966 | 0.9949 |
 | Naive Bayes | 0.9932 | 0.9864 | **1.0000** | 0.9932 |
 
-At this stage, **BiLSTM is the top-performing completed method** on the fixed held-out test set.
-
-JEV will be added later after the full test-set API evaluation is completed. A small connection test must not be reported as an official benchmark result.
+**BiLSTM is the top-performing completed method** on the fixed held-out test set.
 
 ## Repository Structure
 
@@ -127,12 +126,12 @@ prompt-injection-detector/
 │   ├── cleaned/
 │   └── splits/
 ├── scripts/
-│   └── clean_data.py
+│   ├── clean_data.py
+│   └── create_splits.py
 ├── notebooks/
 │   └── final_project.ipynb
 ├── results/
-├── contributions/
-└── presentation/
+└── contributions/
 ```
 
 ## Reproducibility
@@ -144,8 +143,7 @@ Then create the exact group-aware train/validation/test split with:
 python scripts/create_splits.py
 ```
 
-The raw source archives belong in `data/raw/`. The generated fixed split
-files belong in `data/splits/`.
+The raw source archives belong in `data/raw/`. The generated fixed split files belong in `data/splits/`.
 
 ## Team Contributions
 
