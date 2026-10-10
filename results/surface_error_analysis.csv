@@ -1,0 +1,11 @@
+surface,n,accuracy,precision,recall,f1
+html_body|hyperlink,26,1.0,0.0,0.0,0.0
+html_hidden_css,3,1.0,0.0,0.0,0.0
+multipart_mismatch|html_body,3,1.0,0.0,0.0,0.0
+plaintext_body|hyperlink,162,1.0,0.0,0.0,0.0
+html_body,51,1.0,1.0,1.0,1.0
+header,39,1.0,1.0,1.0,1.0
+pdf_attachment,54,1.0,1.0,1.0,1.0
+encoded_obfuscated|html_body,54,1.0,1.0,1.0,1.0
+plaintext_body,141,1.0,1.0,1.0,1.0
+quoted_thread,54,1.0,1.0,1.0,1.0
