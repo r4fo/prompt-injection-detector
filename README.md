@@ -81,7 +81,6 @@ Final split sizes:
 - DistilBERT (`distilbert-base-uncased`)
 - DeBERTa (`microsoft/deberta-v3-small`)
 
-JEV was tested manually on a small 10-example sample, but it was excluded from the final benchmark because the full API benchmark requires paid credits.
 
 ## Evaluation Metrics
 
@@ -128,8 +127,7 @@ prompt-injection-detector/
 ├── scripts/
 │   ├── clean_data.py
 │   └── create_splits.py
-├── notebooks/
-│   └── final_project.ipynb
+├── Prompt Injection.ipynb
 ├── results/
 └── contributions/
 ```
