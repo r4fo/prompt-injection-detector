@@ -6,19 +6,18 @@
 
 ## Contributions
 
-- Contributed to the implementation and experimentation work in the shared Google Colab notebook.
-- Helped with model training and evaluation across the project benchmark.
-- Reviewed the dataset preprocessing, class labels, and final train/validation/test split.
-- Contributed to checking benchmark results and comparing the classical ML, neural-network, and Transformer models.
-- Helped with final presentation preparation, result interpretation, and Q&A review.
+- Reviewed the shared Google Colab project implementation and overall workflow.
+- Studied and reviewed the model pipeline, including the classical ML, neural-network, and Transformer comparisons.
+- Reviewed the final benchmark results and the interpretation of Precision, Recall, and F1-score.
+- Prepared for the final presentation and Q&A by reviewing the dataset pipeline, group-aware split, model comparison, and project conclusions.
+- Helped with final project review before submission.
 
 ## Files / Sections Worked On
 
-- Shared Google Colab implementation used for the project experiments
-- `Prompt Injection.ipynb`
-- Model training and evaluation sections
-- Benchmark/result review
-- Presentation and final project review
+- Shared Google Colab project workflow
+- Model comparison and benchmark interpretation
+- Final results review
+- Presentation and Q&A preparation
 
 ## Git Evidence
 
