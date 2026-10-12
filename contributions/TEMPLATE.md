@@ -12,7 +12,6 @@ Examples:
 - preprocessing implementation;
 - raw E2A data validation;
 - model training/evaluation;
-- JEV evaluation;
 - benchmark/error-analysis code;
 - README/documentation;
 - presentation preparation.
